@@ -85,10 +85,10 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 
 # use tf-idf
 tfidf = TfidfVectorizer(
-           ngram_range=(1, 3),  # 二元文法模型
+           ngram_range=(1, 3),
            use_idf=1,
            smooth_idf=1,
-           stop_words = 'english') # 去掉英文停用词
+           stop_words = 'english') 
 
 data_train_count = tfidf.fit_transform(train_update)
 data_test_count  = tfidf.transform(test_update)
