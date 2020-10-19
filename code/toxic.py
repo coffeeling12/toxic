@@ -111,7 +111,7 @@ print (pred)
 
 # baseline - logistic regression
 model = LogisticRegression(penalty='l2', tol=0.0001, C=1.0, fit_intercept=True, solver='lbfgs', max_iter=30, 
-                           multi_class='auto', verbose=1, n_jobs=6)
+                           multi_class='multinomial', verbose=1, n_jobs=6)
 
 model.fit(data_train_count, y_train)
 y_hat_train = model.predict(X_train)
